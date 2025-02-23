@@ -4,29 +4,32 @@
 ## 1. **Ubuntu**
 Ubuntu คือระบบปฏิบัติการที่ใช้พื้นฐานจาก Linux 
 
-
 **ดาวน์โหลด Ubuntu**
 - สำหรับการติดตั้งบน WSL (Windows Subsystem for Linux): [Ubuntu WSL](https://ubuntu.com/desktop/wsl)
 
+<details>
+<summary>คำสั่งพื้นฐาน</summary>
 
-**คำสั่งพื้นฐาน** 
-  ```bash
+```bash
 sudo apt update                   # อัปเดตแหล่งข้อมูลแพ็คเกจ
 sudo apt upgrade                  # อัปเกรดแพ็คเกจทั้งหมด
 sudo apt install <package_name>   # ติดตั้ง package
 sudo apt-get install <application>   # ติดตั้งแอปพลิเคชัน
 mkdir <directory_name>            # สร้าง folder
 rm <file_name>                    # ลบไฟล์หรืออื่นๆ
-pwd 	                            # เราอยู่ที่ไหนในคอมพิวเตอร์ของเรา
-ls                                # เรียกดูไฟล์และโฟลเดอร์ที่เราอยู่
-ls -l                             # ดูรายละเอียดในไฟล์และโฟลเดอร์
-ls -ltr	                          # เรียกดูไฟล์ เรียงตามเวลา เก่ามาใหม่
-ls -ltrh	                        # เรียกดูไฟล์ เรียงตามเวลา เก่ามาใหม่ แบบเข้าใจง่าย
-man ls                            # เรียกดูคู่มือคำสั่ง ls (กด q เพื่อออก)
+pwd                                # เราอยู่ที่ไหนในคอมพิวเตอร์ของเรา
+ls                                 # เรียกดูไฟล์และโฟลเดอร์ที่เราอยู่
+ls -l                              # ดูรายละเอียดในไฟล์และโฟลเดอร์
+ls -ltr                            # เรียกดูไฟล์ เรียงตามเวลา เก่ามาใหม่
+ls -ltrh                           # เรียกดูไฟล์ เรียงตามเวลา เก่ามาใหม่ แบบเข้าใจง่าย
+man ls                             # เรียกดูคู่มือคำสั่ง ls (กด q เพื่อออก)
 ```
+</details>
 
-**คำสั่ง Change Directory**
-  ```bash
+<details>
+<summary>คำสั่ง Change Directory</summary>
+  
+```bash
 cd <name>                        #เข้าไฟล์
 cd ..                            # ออกไฟล์
 cd  หรือ cd ~                     # กลับไป home
@@ -39,18 +42,46 @@ cp ./test_lv3/test_lv4/newfile.z .                 # คัดลอกไฟล
 chadarat@chachacharat:~/test/test_lv2/test_lv3/test_lv4$ cd ../../test2_lv3  #ออกเเล้วเข้า
 chadarat@chachacharat:~/test/test_lv2/test2_lv3$                             #เข้ามาละ
 ```
+</details>
 
-**คำสั่งอิ่น ๆ**
+<details>
+<summary>คำสั่งอื่น ๆ</summary>
   ```bash
 vi abc.txt                    # เปิดไฟล์ด้วย vi
   Mode i                       # เข้าสู่โหมดแก้ไข
   Esc :wq                      # ออกจาก vi พร้อมบันทึก
   :q!                          # ออกจาก vi โดยไม่บันทึก
 ```
-
+</details>
 
 ## 2. **Github**
+<details>
+<summary>push ขึ้น Git ครั้งแรก</summary>
+  
+  ```bash
+git remote add origin <URL ของ repo>       # เพิ่ม remote repository 
+git branch -M main                         # เปลี่ยนชื่อ branch เป็น main (GitHub ใช้ main แทน master)
+git push -u origin main                    # Push โค้ดขึ้น GitHub 
+git config --global user.name "Your Name"  # ตั้งค่าชื่อของผู้ใช้ Git
+git config --global user.email "your-email@example.com"  # ตั้งค่าอีเมลของผู้ใช้ Git
+```
+</details>
 
+<details>
+<summary>คำสั่งใน Github</summary>
+
+  ```bash
+git init                             # เริ่มต้น Git repository ใหม่ในโฟลเดอร์ปัจจุบัน
+git status                           # แสดงสถานะของไฟล์ใน repository 
+git branch                           # ตรวจสอบ branch ปัจจุบัน
+git add .                            # เพิ่มไฟล์ทั้งหมดเข้า 
+git commit -m "เพิ่มคำอธิบาย commit"    # บันทึกการเปลี่ยนแปลงใน Git
+git log                              # แสดงประวัติ commit ล่าสุด
+git rm <filename>                    # ลบไฟล์และ commit การลบ
+git mv <old-name> <new-name>         # เปลี่ยนชื่อไฟล์และ commit การเปลี่ยนแปลง
+git push --force                     # บังคับ push ทับของเดิม (ใช้ระวัง)
+```
+</details>
 
 ## 3. **Web Page**
 
