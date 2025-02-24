@@ -1,5 +1,9 @@
-# AIPrototype24
+# AIPrototype24 
+Github สำหรับรายวิชา SC664401 Prototyping for Artificial Intelligence and Machine Learning System
 นักศึกษา : ชฎารัตน์ อิ่มสารพางค์ รหัส 643021198-6 STAT
+งานสำหรับรายวิชานี้ 1. Web Page โปรเจค
+                2. Web Application โปรเจค
+                3. Github รายวิชา
 
 ## 1. **Ubuntu**
 Ubuntu คือระบบปฏิบัติการที่ใช้พื้นฐานจาก Linux 
