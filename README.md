@@ -165,7 +165,34 @@ if __name__ == '__main__':
 ```
 
 ## 6. **Web Service**
+Web Service (เว็บเซอร์วิส) คือ ระบบหรือบริการที่ช่วยให้โปรแกรมหรือแอปพลิเคชันต่าง ๆ สามารถสื่อสารและแลกเปลี่ยนข้อมูลกันได้ผ่านเครือข่ายอินเทอร์เน็ต หรืออินทราเน็ต โดยปกติจะใช้ มาตรฐานเปิด (Open Standards) เช่น HTTP, XML, JSON และ SOAP หรือ REST API ในการรับส่งข้อมูล ทำให้แอปพลิเคชันที่เขียนด้วยภาษาโปรแกรมที่ต่างกันหรืออยู่คนละระบบสามารถทำงานร่วมกันได้
 
+   <img src="https://github.com/user-attachments/assets/8eeca293-6bf0-401b-9a74-3c5d7d49bd9d" width="40%">
+
+✅ Web Service ทำงานอย่างไร?
+1. ส่งคำขอ (Request): ระบบหนึ่งส่งข้อมูลไปหาอีกระบบผ่านเครือข่าย (เช่น อินเทอร์เน็ต)
+2. ประมวลผล (Process): Web Service ฝั่งเซิร์ฟเวอร์รับคำขอแล้วจัดการ
+3. ส่งผลลัพธ์กลับ (Response): เซิร์ฟเวอร์ตอบกลับมาด้วยข้อมูลที่ร้องขอ หรือแจ้งผลการทำงาน
+
+<details>
+<summary>ตัวอย่าง code web service</summary>
+
+  ```bash
+import json
+import requests 
+
+url = 'http://172.188.9.245:5001/simpleAPI'
+
+# ข้อมูลที่จะส่งไปในรูปแบบ dictionary
+myobj = {
+    'message_key': 'message_val',
+    'msg': 'tob_chadarat'
+}
+
+# ส่ง POST request ไปยัง web service
+x = requests.post(url, data=json.dumps(myobj))
+```
+</details>
 
 ## 7. **Deep Learning**
 
