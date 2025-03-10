@@ -173,9 +173,34 @@ Web Service (เว็บเซอร์วิส) คือ ระบบหร�
 1. ส่งคำขอ (Request): ระบบหนึ่งส่งข้อมูลไปหาอีกระบบผ่านเครือข่าย (เช่น อินเทอร์เน็ต)
 2. ประมวลผล (Process): Web Service ฝั่งเซิร์ฟเวอร์รับคำขอแล้วจัดการ
 3. ส่งผลลัพธ์กลับ (Response): เซิร์ฟเวอร์ตอบกลับมาด้วยข้อมูลที่ร้องขอ หรือแจ้งผลการทำงาน
-
+   
 <details>
-<summary>ตัวอย่าง code web service</summary>
+<summary>สร้าง Web Service API ด้วย Flask</summary>
+
+  ```bash
+##api
+from flask import Flask, request
+import json
+
+@app.route('/simpleAPI',methods=['POST'])
+def web_service_API_simple():
+    #รับข้อมูล
+    payload = request.data.decode("utf-8")
+    inmessage = json.loads(payload)
+
+    # แสดงผลข้อมูลที่รับเข้ามา
+    print(inmessage)
+
+    # ส่ง response กลับไป
+    json_data = json.dumps({'y': 'received!'})
+    return json_data
+
+if __name__ == "__main__":   # run code 
+    app.run(host='0.0.0.0',debug=True,port=5001) # เป็นคำสั่งที่ทำให้ Flask สร้าง Web Server ขึ้นมาเพื่อรอรับ Request จาก Client
+```
+</details>
+<details>
+<summary>Client ส่งข้อมูลไปยัง Web Service ด้วย requests</summary>
 
   ```bash
 import json
@@ -193,6 +218,8 @@ myobj = {
 x = requests.post(url, data=json.dumps(myobj))
 ```
 </details>
+
+
 
 ## 7. **Deep Learning**
 
