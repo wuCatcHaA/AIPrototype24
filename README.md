@@ -7,7 +7,7 @@ Github สำหรับรายวิชา SC664401 Prototyping for Artifici
 1. Web Page โปรเจค >> [WebPage-AutoInsurance](https://bloodps.github.io/WebPage-Auto-Insurance/) 
 
    <img src="https://github.com/user-attachments/assets/2aa0a4a0-2aaf-48a0-b72d-b9cd5a3638a2" width="40%">
-2. Web Application โปรเจค >> [WebApp-AutoInsurance](https://bloodps.github.io/WebPage-Auto-Insurance/WebPage.html)
+2. Web Application โปรเจค >> [WebApp-AutoInsurance](https://bloodps.github.io/WebPage-Auto-Insurance/tob2.html)
 
    <img src="https://github.com/user-attachments/assets/d30be418-42b3-4226-b8f9-422790c66fbd" width="40%">
 4. Github รายวิชา >> [Github](https://github.com/wuCatcHaA/AIPrototype24)
